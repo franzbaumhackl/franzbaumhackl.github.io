@@ -1,1 +1,395 @@
-Hello
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Franz Ira Baumhackl | Engineering Portfolio</title>
+  <meta name="description" content="Mechanical and Aerospace Engineering portfolio: robotic arm, CubeSat, mechanical design projects, CAD, FEA." />
+
+  <style>
+    :root { --max: 980px; }
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height:1.55;
+      color:#111;
+      background:#fff;
+    }
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 56px; }
+
+    header{ margin-bottom:18px; }
+    .name{ font-size:38px; font-weight:700; margin:0 0 6px; }
+    .sub{ margin:0 0 10px; font-size:14px; color:#222; }
+    .chips{ display:flex; flex-wrap:wrap; gap:10px; font-size:14px; }
+    .chip{
+      display:inline-block;
+      border:1px solid #ddd;
+      border-radius:999px;
+      padding:6px 10px;
+      white-space:nowrap;
+      background:#fff;
+    }
+
+    nav{
+      margin:18px 0 22px;
+      padding:12px 0;
+      border-top:1px solid #ddd;
+      border-bottom:1px solid #ddd;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      font-size:14px;
+    }
+
+    h2{ font-size:18px; margin:24px 0 10px; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .card{
+      border:1px solid #ddd;
+      border-radius:14px;
+      padding:14px 14px 12px;
+      background:#fff;
+    }
+    .titleRow{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:baseline;
+      gap:10px;
+      margin:0 0 6px;
+    }
+    .proj{ font-weight:700; }
+    .ctx{ color:#444; font-size:14px; }
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:8px 0 0;
+      font-size:13px;
+      color:#444;
+    }
+    .pill{
+      border:1px solid #e3e3e3;
+      border-radius:999px;
+      padding:3px 8px;
+      background:#fafafa;
+    }
+
+    .label{
+      font-weight:700;
+      font-size:13px;
+      margin:12px 0 4px;
+    }
+    ul{ margin:6px 0 0 18px; padding:0; }
+    li{ margin:3px 0; }
+
+    .artifactList{
+      margin-top:10px;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      font-size:14px;
+    }
+    .artifactList a{
+      display:inline-flex;
+      gap:8px;
+      align-items:baseline;
+    }
+    .small{ font-size:12px; color:#444; }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:8px;
+      font-size:13px;
+    }
+    th, td{
+      border:1px solid #ddd;
+      padding:6px 8px;
+      text-align:left;
+      vertical-align:top;
+    }
+    th{ background:#fafafa; font-weight:700; }
+
+    details{
+      margin-top:10px;
+      border:1px solid #e3e3e3;
+      border-radius:12px;
+      padding:10px 12px;
+      background:#fcfcfc;
+    }
+    details summary{
+      cursor:pointer;
+      font-weight:700;
+      font-size:13px;
+    }
+
+    footer{
+      margin-top:34px;
+      padding-top:14px;
+      border-top:1px solid #ddd;
+      font-size:12px;
+      color:#444;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <h1 class="name">Franz Ira Baumhackl</h1>
+      <p class="sub">
+        UC Davis Mechanical and Aerospace Engineering student focused on structural analysis, FEA, mechanical design, and systems integration.
+        Below are selected projects with objectives, constraints, approach, results, and deliverables.
+      </p>
+
+      <div class="chips">
+        <a class="chip" href="mailto:frairabaumhackl@gmail.com">frairabaumhackl@gmail.com</a>
+        <a class="chip" href="https://www.linkedin.com/in/franzbaumhackl">linkedin.com/in/franzbaumhackl</a>
+        <a class="chip" href="resume.pdf">Resume (PDF)</a>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#arm">Mechanical Arm</a>
+      <a href="#cubesat">Cube Satellite</a>
+      <a href="#toaster">Toaster</a>
+      <a href="#zeppelin">Zeppelin</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="grid">
+
+        <article class="card" id="arm">
+          <div class="titleRow">
+            <div class="proj">Mechanical Arm</div>
+            <div class="ctx">University Rover Competition (In Progress)</div>
+          </div>
+          <div class="meta">
+            <span class="pill">SolidWorks</span>
+            <span class="pill">Mechanisms</span>
+            <span class="pill">Loads</span>
+            <span class="pill">Integration</span>
+          </div>
+
+          <div class="label">Objective</div>
+          <ul>
+            <li>Design a rigid, dexterous, and robust robotic arm capable of completing delivery and equipment servicing missions onboard a Mars rover.</li>
+            <li>Delivery mission: manipulate objects while traversing difficult terrain; open hinged box and relocate objects no more than 5 kg and no larger than 40 x 40 x 40 cm of varying shape.</li>
+            <li>Equipment servicing mission: perform dexterous operations requiring a high degree of skill, control, and coordination.</li>
+          </ul>
+
+          <div class="label">Constraints</div>
+          <ul>
+            <li>Arm must be easily assembled and removable during competition time.</li>
+            <li>Hand must hold and manipulate a 5 kg object.</li>
+            <li>Must fit within a 1.2 x 1.2 x 1.2 m box.</li>
+            <li>Rover maximum weight 50 kg; total mass of all fielded rover parts for all events 70 kg.</li>
+            <li>Cannot fully enclose electronics within arm.</li>
+          </ul>
+
+          <div class="label">Approach</div>
+          <ul>
+            <li>Delegated subsystem CAD tasks and provided in-person design support to ensure progress and skill development across the team.</li>
+            <li>Selected truss-like structural members to reduce mass and improve load paths; emphasized parametric CAD for rapid iteration.</li>
+            <li>Estimated joint torques using a robotic arm torque calculator reference and early load cases.</li>
+          </ul>
+
+          <div class="label">Early Torque Estimates (N·m)</div>
+          <table aria-label="Torque estimates">
+            <thead>
+              <tr><th>Joint</th><th>Torque (N·m)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Base</td><td>46.6</td></tr>
+              <tr><td>Shoulder</td><td>93.3396947</td></tr>
+              <tr><td>Elbow</td><td>42.68834745</td></tr>
+              <tr><td>Wrist</td><td>3.3146477 (hand TBD)</td></tr>
+            </tbody>
+          </table>
+
+          <div class="label">Results</div>
+          <ul>
+            <li>Draft CAD iterations in progress (Draft 1, Draft 2).</li>
+            <li>Subsystem deliverables tracked through team meetings and reviews.</li>
+          </ul>
+
+          <div class="label">References</div>
+          <ul>
+            <li>Robot Analysis: The Mechanics of Parallel and Serial Manipulators (Lung-Wen Tsai).</li>
+            <li><a href="https://community.robotshop.com/tutorials/show/robot-arm-torque-calculator">Robot arm torque calculator</a></li>
+          </ul>
+
+          <div class="label">Artifacts</div>
+          <div class="artifactList">
+            <a href="assets/URC_Arm_Subsystem_Meeting_2025-10-29.pdf">Arm Subsystem Meeting (2025-10-29) <span class="small">(PDF)</span></a>
+            <a href="assets/URC_Rover_Arm_Meeting_2025-11-21.pdf">URC Rover Arm Meeting (2025-11-21) <span class="small">(PDF)</span></a>
+            <a href="assets/URC_Rover_Arm_Meeting_2026-01-08.pdf">URC Rover Arm Meeting (2026-01-08) <span class="small">(PDF)</span></a>
+            <a href="assets/URC_Rover_Arm_Meeting_2026-01-15.pdf">URC Rover Arm Meeting (2026-01-15) <span class="small">(PDF)</span></a>
+          </div>
+
+          <details>
+            <summary>Management Artifacts (optional)</summary>
+            <p class="small">
+              Put task tables and internal meeting logistics here. Keep the main page focused on engineering.
+              If you keep Google Docs links, use share links that do not require login and do not include "/edit".
+            </p>
+          </details>
+        </article>
+
+        <article class="card" id="cubesat">
+          <div class="titleRow">
+            <div class="proj">Cube Satellite</div>
+            <div class="ctx">CubeSat Launch Initiative (Complete)</div>
+          </div>
+          <div class="meta">
+            <span class="pill">Thermal Desktop</span>
+            <span class="pill">ANSYS</span>
+            <span class="pill">SolidWorks</span>
+            <span class="pill">Test Fixtures</span>
+          </div>
+
+          <div class="label">Objective</div>
+          <ul>
+            <li>Design and modify CubeSat structure to mount flight hardware; design test fixtures for vibration testing of batteries on an electromagnetic shaker.</li>
+            <li>Analyze thermal margins of electrical hardware and structural components; finalize material properties, outgassing, and bill of materials.</li>
+            <li>Support mission goal: REALOP tests feasibility of hard disk drives as alternatives to reaction wheels for attitude control, downlinking accelerometer data to a ground station.</li>
+          </ul>
+
+          <div class="label">Constraints</div>
+          <ul>
+            <li>Structure compatible with 10 x 10 x 20 cm form factor.</li>
+            <li>Total mass below 2 kg.</li>
+            <li>Thermal limits: circuit boards below 100 °C; batteries below 60 °C.</li>
+            <li>Outgassing limits: total mass loss &lt; 1%, CVCM &lt; 0.1%; part volume above minimum volume requirement (mass/density).</li>
+          </ul>
+
+          <div class="label">Battery Vibration Test Profile</div>
+          <table aria-label="Vibration profile">
+            <thead>
+              <tr><th>Frequency (Hz)</th><th>ASD (G²/Hz)</th><th>dB/OCT</th><th>Grms</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>20.00</td><td>0.028800</td><td>*</td><td>*</td></tr>
+              <tr><td>40.00</td><td>0.028800</td><td>0.00</td><td>0.76</td></tr>
+              <tr><td>70.00</td><td>0.072000</td><td>4.93</td><td>1.43</td></tr>
+              <tr><td>700.00</td><td>0.072000</td><td>0.00</td><td>6.89</td></tr>
+              <tr><td>2000.00</td><td>0.018720</td><td>-3.86</td><td>9.65</td></tr>
+            </tbody>
+          </table>
+
+          <div class="label">Approach</div>
+          <ul>
+            <li>Developed simplified CAD model for meshing and simulations in SolidWorks, ANSYS, and Thermal Desktop.</li>
+            <li>Built hot-case thermal simulation for RF PCB and reviewed temperature vs time against guidance from AFRL Small Satellite Modeling Guide.</li>
+            <li>Designed battery vibration mount fixtures for multi-axis shaker testing.</li>
+          </ul>
+
+          <div class="label">Results</div>
+          <ul>
+            <li>Completed structural component implementation and documentation supporting assembly readiness.</li>
+            <li>Produced thermal results and project documentation for review and communication.</li>
+          </ul>
+
+          <div class="label">Artifacts</div>
+          <div class="artifactList">
+            <a href="assets/REALOP_Bill_of_Materials_2025.pdf">REALOP Bill of Materials (2025) <span class="small">(PDF)</span></a>
+            <a href="assets/DAS_Data_Collection_Sheet.pdf">DAS Data Collection Sheet <span class="small">(PDF)</span></a>
+            <a href="assets/URC_Poster_Presentation.pdf">University Research Conference Poster <span class="small">(PDF)</span></a>
+            <a href="assets/Battery_Vibration_Mount_Drawings.pdf">Battery Vibration Mount Drawings <span class="small">(PDF)</span></a>
+          </div>
+        </article>
+
+        <article class="card" id="toaster">
+          <div class="titleRow">
+            <div class="proj">Toaster</div>
+            <div class="ctx">EME 150A Mechanical Design (Complete)</div>
+          </div>
+          <div class="meta">
+            <span class="pill">CAD</span>
+            <span class="pill">Mechanisms</span>
+            <span class="pill">Documentation</span>
+          </div>
+
+          <div class="label">Objective</div>
+          <ul>
+            <li>Create a toaster CAD model for EME 150A and improve the mechanism to survive extreme use cases.</li>
+          </ul>
+
+          <div class="label">Approach</div>
+          <ul>
+            <li>Measured and documented major components including springs, lever, base plates, handle, and stopper.</li>
+            <li>Disassembled toaster, modeled internal mechanism, and produced complete CAD assembly.</li>
+          </ul>
+
+          <div class="label">Results</div>
+          <ul>
+            <li>Completed disassembly documentation and CAD model deliverables.</li>
+          </ul>
+
+          <div class="label">Artifacts</div>
+          <div class="artifactList">
+            <a href="assets/EME150A_Toaster_Report.pdf">Project Report <span class="small">(PDF)</span></a>
+          </div>
+        </article>
+
+        <article class="card" id="zeppelin">
+          <div class="titleRow">
+            <div class="proj">Zeppelin</div>
+            <div class="ctx">ENG 004 Engineering Graphics in Design (Complete)</div>
+          </div>
+          <div class="meta">
+            <span class="pill">SolidWorks</span>
+            <span class="pill">Assemblies</span>
+            <span class="pill">Report</span>
+          </div>
+
+          <div class="label">Objective</div>
+          <ul>
+            <li>Create a Zeppelin in SolidWorks as a team project for ENG 004.</li>
+          </ul>
+
+          <div class="label">Results</div>
+          <ul>
+            <li>Completed project report and CAD deliverables including assembly description, modeling process, and improvements.</li>
+          </ul>
+
+          <div class="label">Artifacts</div>
+          <div class="artifactList">
+            <a href="assets/ENG004_Zeppelin_Project_Report.pdf">Project Report <span class="small">(PDF)</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:frairabaumhackl@gmail.com">frairabaumhackl@gmail.com</a><br/>
+        LinkedIn: <a href="https://www.linkedin.com/in/franzbaumhackl">linkedin.com/in/franzbaumhackl</a>
+      </p>
+    </section>
+
+    <footer>
+      <div>Last updated: February 2026</div>
+      <div class="small">Upload PDFs/images into <code>assets/</code>. GitHub Pages will serve them automatically.</div>
+    </footer>
+
+  </div>
+</body>
+</html>
